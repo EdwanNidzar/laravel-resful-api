@@ -18,5 +18,10 @@ class Contact extends Model
     {
         return $this->belongsTo(Contact::class, "user_id", "id");
     }
+
+    public function address(): BelongsTo
+    {
+        return $this->belongsTo(Address::class, "contact_id", "id");
+    }
 }
 
